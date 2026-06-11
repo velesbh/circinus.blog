@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply text-gray-800 bg-white antialiased; }
+}
+
+@layer components {
+  .btn-primary { @apply inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-sm; }
+  .btn-secondary { @apply inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm; }
+  .tag { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-50 text-brand-700; }
+  .prose-custom h2 { @apply text-2xl font-bold text-gray-900 mt-10 mb-4; }
+  .prose-custom h3 { @apply text-xl font-semibold text-gray-900 mt-8 mb-3; }
+  .prose-custom p { @apply text-gray-700 leading-relaxed mb-4; }
+  .prose-custom a { @apply text-brand-500 underline hover:text-brand-700; }
+  .prose-custom ul { @apply list-disc list-inside space-y-1.5 mb-4; }
+  .prose-custom ol { @apply list-decimal list-inside space-y-1.5 mb-4; }
+  .prose-custom blockquote { @apply border-l-4 border-brand-500 pl-4 italic text-gray-600 my-6; }
+  .prose-custom strong { @apply font-semibold text-gray-900; }
+  .prose-custom code { @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono; }
+}
+
+.ad-unit {
+  @apply w-full flex items-center justify-center my-6 overflow-hidden rounded-lg;
+  min-height: 90px;
+  background: #f9fafb;
+}
